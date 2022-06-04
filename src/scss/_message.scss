@@ -1,0 +1,36 @@
+.message-box__container {
+    width: 920px;
+    height: 210px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-box__content {
+    max-width: 500px;
+    height: inherit;
+    // background-color: red;
+    font-family: sans-serif, 'Roboto';
+
+    & h1 {
+        padding: 56px 0 24px 95px;
+        color: #121212;
+        font-size: 42px;
+        line-height: 50.4px;
+    }
+
+    & p {
+        color: #121212;
+        padding: 0 0 56px 95px;
+        line-height: 24px;
+    }
+
+    & span {
+        font-weight: 600;
+    }
+}
+
+.fa-xmark {
+    color: black;
+}
