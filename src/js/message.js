@@ -46,7 +46,10 @@ class Message extends HTMLElement {
     };
 
     resetCounts() {
-        this.shadowRoot.querySelector('button').addEventListener('click', resetCountsHandler);
+        this.shadowRoot.querySelector('button').addEventListener('click', () => {
+            resetCountsHandler();
+            overlayCloseHandler();
+        });
     }
 
     connectedCallback() {
