@@ -162,7 +162,6 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(139, 139, 139, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,22 +173,57 @@
           align-items: center;
 }
 
+.overlay-container__backdrop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(139, 139, 139, 0.7);
+}
+
 .message-box__container {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: 375px;
+  margin: 0 auto;
   height: 210px;
   width: 100%;
   background-color: #FFF;
   overflow: hidden;
 }
 
-.message-box__container:after {
-  position: relative;
-  top: -60%;
-  left: 88%;
-  display: inline-block;
-  content: "\00d7";
-  /* This will render the 'X' */
-  font-size: 32px;
-  font-weight: 700;
+.close-burger {
+  position: absolute;
+  right: 46px;
+  top: 46px;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  color: #000;
+  cursor: pointer;
+}
+
+.close-burger:before, .close-burger:after {
+  position: absolute;
+  left: 5px;
+  content: ' ';
+  height: 12px;
+  width: 2px;
+  background-color: #000;
+}
+
+.close-burger:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 17px;
+}
+
+.close-burger:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  height: 17px;
 }
 
 .message-box__content {
@@ -256,15 +290,6 @@
   .message-box__container {
     width: 620px;
   }
-  .message-box__container:after {
-    position: relative;
-    top: -63%;
-    left: 90%;
-    display: inline-block;
-    content: "\00d7";
-    /* This will render the 'X' */
-    font-size: 32px;
-  }
 }
 
 @media (min-width: 1140px) {
@@ -272,21 +297,9 @@
     width: 920px;
     padding: 0 96px 0 96px;
   }
-  .message-box__container:after {
-    position: relative;
-    top: -63%;
-    left: 105%;
-    display: inline-block;
-    content: "\00d7";
-    /* This will render the 'X' */
-    font-size: 32px;
-  }
 }
 
-/*
-Author: Kniw Studio
-*/
-.btn {
+.btn-reset {
   text-decoration: none;
   border-radius: 32px;
   border: 1px solid #E4C1AE;
@@ -294,7 +307,7 @@ Author: Kniw Studio
   overflow: hidden;
 }
 
-.btn:before {
+.btn-reset:before {
   content: "";
   position: absolute;
   top: 0;
@@ -306,7 +319,7 @@ Author: Kniw Studio
   transition: all 650ms;
 }
 
-.btn:hover:before {
+.btn-reset:hover:before {
   left: 100%;
 }
 

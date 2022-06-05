@@ -1,13 +1,10 @@
 export const overlayInitHandler = () => {
     const overlayNode = document.createElement('overlay-window');
     document.body.prepend(overlayNode);
-
-    // overlayCloseHandler(overlayNode);
-
 }
 
-// const overlayCloseHandler = (selectedOverlayNode) => {
-//     selectedOverlayNode.addEventListener('click', () => {
-//         document.body.removeChild(selectedOverlayNode);
-//     });
-// }
+
+export const overlayCloseHandler = () => {
+    const overlay = document.querySelector('overlay-window');
+    document.body.removeChild(overlay);
+}

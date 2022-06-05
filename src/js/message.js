@@ -1,4 +1,5 @@
 import { resetCountsHandler, increment } from './helpers/message-helper.js';
+import { overlayCloseHandler } from './helpers/overlay-helper.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -14,12 +15,11 @@ template.innerHTML = `
                     to related button.
                 </p>
             </div>
-            <button class="btn">Reset counter</button>
+            <button class="btn-reset">Reset counter</button>
         </div>
-        <div class="close"></div>
+        <div class="close-burger"></div>
     </div>
 `;
-//<button>Reset counts</button>
 class Message extends HTMLElement {
     constructor() {
         super();
@@ -29,8 +29,12 @@ class Message extends HTMLElement {
         this.counts = 0;
     };
 
+    closePopup() {
+        const closeBurger = this.shadowRoot.querySelector('.close-burger');
+        closeBurger.addEventListener('click', overlayCloseHandler)
+    }
+
     makeButtonVisible() {
-        this.counts = +localStorage.getItem('counter');
         const resetCountsBtn = this.shadowRoot.querySelector('button');
         resetCountsBtn.classList.toggle('resetButtonVisible', this.counts > 5);
     };
@@ -41,11 +45,16 @@ class Message extends HTMLElement {
         outputElement.prepend(this.counts);
     };
 
+    resetCounts() {
+        this.shadowRoot.querySelector('button').addEventListener('click', resetCountsHandler);
+    }
+
     connectedCallback() {
         increment();
         this.outputClicks();
         this.makeButtonVisible();
-        this.shadowRoot.querySelector('button').addEventListener('click', resetCountsHandler);
+        this.closePopup();
+        this.resetCounts();
     };
 
 };

@@ -9,7 +9,7 @@ template.innerHTML = `
         </div>
         <div class="main-module-content__container">
             <div class="content">
-                <h1>Lorem Ipsum</h1>
+                <h1></h1>
                 <p></p>
                 <button>Button</button>
             </div>
@@ -25,17 +25,21 @@ class MainModule extends HTMLElement {
     };
 
     static get observedAttributes() {
-        return ['picture', 'content'];
+        return ['picture', 'content', 'title'];
+    }
+
+    loadOverlay() {
+        this.shadowRoot.querySelector('button').addEventListener('click', overlayInitHandler);
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
+        this.shadowRoot.querySelector('h1').textContent = this.getAttribute('title');
         this.shadowRoot.querySelector('.displayed-picture').src = this.getAttribute('picture');
         this.shadowRoot.querySelector('p').textContent = this.getAttribute('content');
     };
 
     connectedCallback() {
-        // localStorage.setItem('counter', 0);
-        this.shadowRoot.querySelector('button').addEventListener('click', overlayInitHandler);
+        this.loadOverlay();
     }
 };
 

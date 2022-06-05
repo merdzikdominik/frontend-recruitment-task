@@ -1,19 +1,43 @@
 .message-box__container {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    top: 375px;
+    margin: 0 auto;
     height: 210px;
     width: 100%;
     background-color: #FFF;
     overflow: hidden;
-
-    &:after {
-        position: relative;
-        top: -60%;
-        left: 88%;
-        display: inline-block;
-        content: "\00d7"; /* This will render the 'X' */
-        font-size: 32px;
-        font-weight: 700;
-    }
 }
+
+.close-burger {
+    position: absolute;
+    right: 46px;
+    top: 46px;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    color: #000;
+    cursor: pointer;
+
+    &:before, &:after {
+        position: absolute;
+        left: 5px;
+        content: ' ';
+        height: 12px;
+        width: 2px;
+        background-color: #000;
+      }
+      &:before {
+        transform: rotate(45deg);
+        height: 17px;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        height: 17px;
+      }
+  }
 
 .message-box__content {
     display: flex;
@@ -67,15 +91,6 @@
 @media (min-width: 768px) {
     .message-box__container {
         width: 620px;
-        // padding-left: 96px;
-        &:after {
-            position: relative;
-            top: -63%;
-            left: 90%;
-            display: inline-block;
-            content: "\00d7"; /* This will render the 'X' */
-            font-size: 32px;
-        }
     }
 
 }
@@ -84,15 +99,6 @@
     .message-box__container {
         width: 920px;
         padding: 0 96px 0 96px;
-
-        &:after {
-            position: relative;
-            top: -63%;
-            left: 105%;
-            display: inline-block;
-            content: "\00d7"; /* This will render the 'X' */
-            font-size: 32px;
-        }
     }
     
 }
