@@ -14,18 +14,16 @@ template.innerHTML = `
                     to related button.
                 </p>
             </div>
-            <i class="fa-solid fa-xmark"></i>
-            <button>Reset counts</button>
+            <button class="btn">Reset counter</button>
         </div>
+        <div class="close"></div>
     </div>
 `;
-
+//<button>Reset counts</button>
 class Message extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.styles = document.querySelector('script[src*="fontawesome"]');
-        this.shadowRoot.appendChild(this.styles.cloneNode(true));
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
         this.counts = 0;

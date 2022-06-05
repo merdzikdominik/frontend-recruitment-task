@@ -6,7 +6,6 @@ template.innerHTML = `
     </div>
 
 `;
-//<message-box></message-box>
 class Overlay extends HTMLElement {
     constructor() {
         super();

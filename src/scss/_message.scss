@@ -3,6 +3,16 @@
     width: 100%;
     background-color: #FFF;
     overflow: hidden;
+
+    &:after {
+        position: relative;
+        top: -60%;
+        left: 88%;
+        display: inline-block;
+        content: "\00d7"; /* This will render the 'X' */
+        font-size: 32px;
+        font-weight: 700;
+    }
 }
 
 .message-box__content {
@@ -22,6 +32,7 @@
         color: #fff;
         background-color: #E4C1AE;
         display: none;
+        cursor: pointer;
     }
 }
 
@@ -57,12 +68,31 @@
     .message-box__container {
         width: 620px;
         // padding-left: 96px;
+        &:after {
+            position: relative;
+            top: -63%;
+            left: 90%;
+            display: inline-block;
+            content: "\00d7"; /* This will render the 'X' */
+            font-size: 32px;
+        }
     }
+
 }
 
 @media (min-width: 1140px) {
     .message-box__container {
         width: 920px;
         padding: 0 96px 0 96px;
+
+        &:after {
+            position: relative;
+            top: -63%;
+            left: 105%;
+            display: inline-block;
+            content: "\00d7"; /* This will render the 'X' */
+            font-size: 32px;
+        }
     }
+    
 }
