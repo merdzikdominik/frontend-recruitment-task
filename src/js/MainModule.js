@@ -1,4 +1,4 @@
-import { overlayInit } from './helpers/overlay-helper.js';
+import { overlayInitHandler } from './helpers/overlay-helper.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -34,7 +34,8 @@ class MainModule extends HTMLElement {
     };
 
     connectedCallback() {
-        this.shadowRoot.querySelector('button').addEventListener('click', overlayInit);
+        // localStorage.setItem('counter', 0);
+        this.shadowRoot.querySelector('button').addEventListener('click', overlayInitHandler);
     }
 };
 

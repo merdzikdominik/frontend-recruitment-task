@@ -1,28 +1,50 @@
 .message-box__container {
-    width: 920px;
     height: 210px;
+    width: 100%;
     background-color: #FFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    overflow: hidden;
 }
 
 .message-box__content {
-    max-width: 500px;
-    height: inherit;
-    // background-color: red;
+    display: flex;
+    justify-content: space-between;
     font-family: sans-serif, 'Roboto';
+    align-items: center;
+    padding: 56px 25px 0 25px;
+
+    & button {
+        width: 128px;
+        height: 48px;
+        font-size: 16px;
+        border-radius: 32px;
+        border: none;
+        margin-top: 32px;
+        color: #fff;
+        background-color: #E4C1AE;
+        display: none;
+    }
+}
+
+.resetButtonVisible {
+    display: block!important;
+}
+
+.message-box__text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: inherit;
 
     & h1 {
-        padding: 56px 0 24px 95px;
+        width: 100%;
+        max-width: 380px;
         color: #121212;
         font-size: 42px;
-        line-height: 50.4px;
     }
 
     & p {
         color: #121212;
-        padding: 0 0 56px 95px;
         line-height: 24px;
     }
 
@@ -31,6 +53,16 @@
     }
 }
 
-.fa-xmark {
-    color: black;
+@media (min-width: 768px) {
+    .message-box__container {
+        width: 620px;
+        // padding-left: 96px;
+    }
+}
+
+@media (min-width: 1140px) {
+    .message-box__container {
+        width: 920px;
+        padding: 0 96px 0 96px;
+    }
 }
