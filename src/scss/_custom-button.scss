@@ -1,3 +1,5 @@
+// @use 'utils';
+
 .text-box {
     width: 128px;
 }
@@ -12,6 +14,11 @@
     transition: all .2s;
     position: absolute;
     font-weight: 700;
+}
+
+.btn:active, .btn:hover, .btn:focus {
+    text-decoration: none;
+    color: $white;
 }
 
 .btn-not-visible {
@@ -29,8 +36,8 @@
 }
 
 .btn-colors {
-    background-color: #E4C1AE;
-    color: #fff;
+    background-color: $light-brown;
+    color: $white;
 }
 
 .btn::after {
@@ -47,7 +54,7 @@
 }
 
 .btn-colors::after {
-    background-color: #a0887c;
+    background-color: $grey-brown;
 }
 
 .btn:hover::after {
@@ -55,7 +62,8 @@
     opacity: 0;
 }
 
-// .btn-animate {  button comes slowly from the bottom after page refresh/ popup appear
+// button comes slowly from the bottom after page refresh/ popup appear
+// .btn-animate {
 //     animation: moveInBottom 5s ease-out;
 //     animation-fill-mode: backwards;
 // }

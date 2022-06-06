@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@use 'utils';
 .main-module {
   width: 100%;
   font-family: sans-serif, 'Roboto';
@@ -167,7 +168,8 @@
   height: 100vh;
   position: fixed;
   z-index: inherit;
-  background-color: rgba(139, 139, 139, 0.7);
+  background-color: #121212;
+  opacity: 0.5;
 }
 
 .message-box__container {
@@ -268,9 +270,6 @@
   .message-box__container {
     width: 620px;
   }
-  .message-box__content {
-    margin-right: 60px;
-  }
 }
 
 @media (min-width: 1140px) {
@@ -300,6 +299,11 @@
   font-weight: 700;
 }
 
+.btn:active, .btn:hover, .btn:focus {
+  text-decoration: none;
+  color: #FFF;
+}
+
 .btn-not-visible {
   display: none;
 }
@@ -320,7 +324,7 @@
 
 .btn-colors {
   background-color: #E4C1AE;
-  color: #fff;
+  color: #FFF;
 }
 
 .btn::after {
@@ -338,7 +342,7 @@
 }
 
 .btn-colors::after {
-  background-color: #a0887c;
+  background-color: #A0887C;
 }
 
 .btn:hover::after {

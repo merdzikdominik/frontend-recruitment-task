@@ -1,3 +1,5 @@
+// @use 'utils';
+
 .message-box__container {
     position: absolute;
     z-index: 7;
@@ -7,7 +9,7 @@
     margin: 0 auto;
     height: 210px;
     width: 100%;
-    background-color: #FFF;
+    background-color: $white;
     overflow: hidden;
     font-family: sans-serif, 'Roboto';
 }
@@ -19,7 +21,7 @@
     width: 12px;
     height: 12px;
     opacity: 1;
-    color: #000;
+    color: $black;
     cursor: pointer;
 
     &:before, &:after {
@@ -28,7 +30,7 @@
         content: ' ';
         height: 12px;
         width: 2px;
-        background-color: #000;
+        background-color: $black;
       }
       &:before {
         transform: rotate(45deg);
@@ -63,7 +65,7 @@
     & h1 {
         width: 100%;
         max-width: 380px;
-        color: #121212;
+        color: $dark;
         font-size: 42px;
     }
 
@@ -77,18 +79,18 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
     .message-box__container {
         width: 620px;
     }
 
-    .message-box__content {
-        margin-right: 60px;
-    }
+    // .message-box__content {
+    //     margin-right: 60px;
+    // }
 
 }
 
-@media (min-width: 1140px) {
+@media (min-width: $desktop) {
     .message-box__container {
         width: 920px;
     }
