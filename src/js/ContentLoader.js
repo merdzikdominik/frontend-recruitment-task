@@ -11,13 +11,13 @@ template.innerHTML = `
             <div class="content">
                 <h1></h1>
                 <p></p>
-                <button>Button</button>
+                <custom-button content="Button"></custom-button>
             </div>
         </div>
     </section>
 `;
 
-class MainModule extends HTMLElement {
+class ContentLoader extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -26,11 +26,12 @@ class MainModule extends HTMLElement {
 
     static get observedAttributes() {
         return ['picture', 'content', 'title'];
-    }
+    };
 
+    // method fires after pressing the first button on the main page, as the name indicates it loads the overlay with the popup message
     loadOverlay() {
-        this.shadowRoot.querySelector('button').addEventListener('click', overlayInitHandler);
-    }
+        this.shadowRoot.querySelector('custom-button').addEventListener('click', overlayInitHandler);
+    };
 
     attributeChangedCallback(name, oldValue, newValue) {
         this.shadowRoot.querySelector('h1').textContent = this.getAttribute('title');
@@ -40,7 +41,7 @@ class MainModule extends HTMLElement {
 
     connectedCallback() {
         this.loadOverlay();
-    }
-};
+    };
+}
 
-window.customElements.define('main-module', MainModule);
+window.customElements.define('content-loader', ContentLoader);

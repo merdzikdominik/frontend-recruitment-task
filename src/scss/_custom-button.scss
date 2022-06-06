@@ -1,28 +1,73 @@
-.btn-reset {
-    text-decoration: none;
-    border-radius: 32px;
-    border: 1px solid #E4C1AE;
-    position: relative;
-    overflow: hidden;
+.text-box {
+    width: 128px;
+}
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            120deg,
-            transparent,
-            rgba(255, 255, 255, 0.4),
-            transparent
-        );
-        transition: all 650ms;
-        }
-        
-    &:hover:before {
-        left: 100%;
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    padding: 16px 40px;
+    display: inline-block;
+    border-radius: 48px;
+    text-align: center;
+    transition: all .2s;
+    position: absolute;
+    font-weight: 700;
+}
+
+.btn-not-visible {
+    display: none;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-colors {
+    background-color: #E4C1AE;
+    color: #fff;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-colors::after {
+    background-color: #a0887c;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+// .btn-animate {  button comes slowly from the bottom after page refresh/ popup appear
+//     animation: moveInBottom 5s ease-out;
+//     animation-fill-mode: backwards;
+// }
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }

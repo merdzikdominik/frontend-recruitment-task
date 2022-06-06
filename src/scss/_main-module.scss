@@ -1,5 +1,6 @@
 .main-module {
     width: 100%;
+    font-family: sans-serif, 'Roboto';
 
     &-image__container {
         width: 100%;
@@ -10,20 +11,6 @@
         width: 100%;
         height: 50%;
         padding-top: 46px;
-        font-family: sans-serif, 'Roboto';
-
-        & button {
-            width: 128px;
-            height: 48px;
-            font-size: 16px;
-            border-radius: 32px;
-            border: none;
-            margin-top: 32px;
-            padding: 16px 40px;
-            color: #fff;
-            background-color: #E4C1AE;
-            cursor: pointer;
-        }
     }
 }
 
@@ -38,12 +25,14 @@
         font-size: 42px;
         line-height: 50.4px;
         padding-bottom: 24px;
+        font-weight: 700;
     }
 
     & p {
         max-width: 600px;
         padding: 0 2em;
         line-height: 24px;
+        margin-bottom: 32px;
     }
 }
 

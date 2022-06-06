@@ -16,6 +16,7 @@ class Overlay extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true));
     };
 
+    // clicking on the grey background will trigger the helper function responsible for removing the whole overlay component from DOM
     overlayBackdropClose() {
         const overlay = document.querySelector('overlay-window');
         const backdrop = this.shadowRoot.querySelector('.overlay-container__backdrop');
@@ -24,7 +25,7 @@ class Overlay extends HTMLElement {
 
     connectedCallback() {
         this.overlayBackdropClose();
-    }
+    };
 }
 
 window.customElements.define('overlay-window', Overlay);
