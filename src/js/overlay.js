@@ -3,10 +3,10 @@ import { overlayCloseHandler } from './helpers/overlay-helper.js';
 const template = document.createElement('template');
 template.innerHTML = `
     <link rel="stylesheet" href="src/scss/main.css">
-    <div class="overlay-container">
+    <section class="overlay-container">
         <message-box></message-box>
         <div class="overlay-container__backdrop"></div>
-    </div>
+    </section>
 
 `;
 class Overlay extends HTMLElement {

@@ -7,7 +7,7 @@
     right: 0;
     top: 375px;
     margin: 0 auto;
-    height: 210px;
+    // height: 210px;
     width: 100%;
     background-color: $white;
     overflow: hidden;
@@ -46,9 +46,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 56px;
+    padding-top: 57px;
     padding-left: 25px;
     padding-right: 25px;
+    padding-bottom: 57px;
 }
 
 .resetButtonVisible {

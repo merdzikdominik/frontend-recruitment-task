@@ -1,0 +1,26 @@
+.user-data-table__container {
+    width: 100%;
+    height: 108px;
+    overflow-y: scroll;
+
+    & table {
+        border-collapse: collapse;
+        width: 100%;
+
+        th {
+            background-color: #eeeeee;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eeeeee;
+          }
+        
+    }
+}

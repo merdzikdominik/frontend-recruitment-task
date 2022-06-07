@@ -18,6 +18,7 @@ template.innerHTML = `
             <custom-button class="btn-not-visible" content="Reset Counter"></custom-button>
         </div>
         <div class="close-burger"></div>
+        <user-table></user-table>
     </div>
 `;
 class Message extends HTMLElement {
