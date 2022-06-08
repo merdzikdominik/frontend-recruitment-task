@@ -180,7 +180,7 @@
   top: 375px;
   margin: 0 auto;
   width: 100%;
-  background-color: #FFF;
+  background-color: #FFFFFF;
   overflow: hidden;
   font-family: sans-serif, 'Roboto';
 }
@@ -192,7 +192,7 @@
   width: 12px;
   height: 12px;
   opacity: 1;
-  color: #000;
+  color: #000000;
   cursor: pointer;
 }
 
@@ -202,7 +202,7 @@
   content: ' ';
   height: 12px;
   width: 2px;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .close-burger:before {
@@ -301,7 +301,7 @@
 
 .btn:active, .btn:hover, .btn:focus {
   text-decoration: none;
-  color: #FFF;
+  color: #FFFFFF;
 }
 
 .btn-not-visible {
@@ -324,7 +324,7 @@
 
 .btn-colors {
   background-color: #E4C1AE;
-  color: #FFF;
+  color: #FFFFFF;
 }
 
 .btn::after {
@@ -389,18 +389,18 @@
 }
 
 .user-data-table__container table th {
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
 }
 
 .user-data-table__container table th, .user-data-table__container table td {
-  border: 1px solid #dddddd;
+  border: 1px solid #DDDDDD;
   text-align: left;
   padding: 8px;
   text-align: center;
 }
 
 .user-data-table__container table tr:nth-child(even) {
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
 }
 
 * {
