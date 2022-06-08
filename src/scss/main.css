@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @use 'utils';
 .main-module {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   font-family: sans-serif, 'Roboto';
 }
@@ -62,11 +69,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0 auto;
   }
   .main-module-image__container {
     display: -webkit-box;
@@ -173,13 +175,11 @@
 }
 
 .message-box__container {
-  position: absolute;
+  position: relative;
   z-index: 7;
   left: 0;
   right: 0;
-  top: 375px;
   margin: 0 auto;
-  height: 210px;
   width: 100%;
   background-color: #FFF;
   overflow: hidden;
@@ -192,7 +192,6 @@
   top: 46px;
   width: 12px;
   height: 12px;
-  opacity: 1;
   color: #000;
   cursor: pointer;
 }
@@ -225,12 +224,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 56px;
-  padding-left: 25px;
-  padding-right: 25px;
+  -webkit-box-align: self-end;
+      -ms-flex-align: self-end;
+          align-items: self-end;
+  padding: 57px 25px;
 }
 
 .resetButtonVisible {
@@ -283,11 +280,14 @@
 }
 
 .text-box {
-  width: 128px;
+  width: 148px;
+  height: 70px;
+  position: relative;
 }
 
 .btn:link,
 .btn:visited {
+  word-break: normal;
   text-decoration: none;
   padding: 16px 40px;
   display: inline-block;

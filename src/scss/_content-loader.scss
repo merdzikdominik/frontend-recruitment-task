@@ -1,6 +1,8 @@
 @use 'utils';
 
 .main-module {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     font-family: sans-serif, 'Roboto';
 
@@ -50,8 +52,8 @@
 @media (min-width: $tablet) {
     .main-module {
         display: flex;
-        flex-direction: column;
-        margin: 0 auto;
+        // flex-direction: column;
+        // margin: 0 auto;
 
         &-image__container {
             display: flex;

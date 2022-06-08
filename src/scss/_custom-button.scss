@@ -1,11 +1,16 @@
 // @use 'utils';
 
 .text-box {
-    width: 128px;
+    // margin: 0 auto;
+    // width: 128px;
+    width: 148px;
+    height: 70px;
+    position: relative;
 }
 
 .btn:link,
 .btn:visited {
+    word-break: normal;
     text-decoration: none;
     padding: 16px 40px;
     display: inline-block;

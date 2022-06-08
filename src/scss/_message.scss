@@ -1,13 +1,9 @@
-// @use 'utils';
-
 .message-box__container {
-    position: absolute;
+    position: relative;
     z-index: 7;
     left: 0;
     right: 0;
-    top: 375px;
     margin: 0 auto;
-    height: 210px;
     width: 100%;
     background-color: $white;
     overflow: hidden;
@@ -20,7 +16,6 @@
     top: 46px;
     width: 12px;
     height: 12px;
-    opacity: 1;
     color: $black;
     cursor: pointer;
 
@@ -45,10 +40,8 @@
 .message-box__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 56px;
-    padding-left: 25px;
-    padding-right: 25px;
+    align-items: self-end;
+    padding: 57px 25px;
 }
 
 .resetButtonVisible {
@@ -83,9 +76,9 @@
     .message-box__container {
         width: 620px;
     }
-
+    //pomocy
     // .message-box__content {
-    //     margin-right: 60px;
+    //     padding-right: 85px;
     // }
 
 }
@@ -95,9 +88,11 @@
         width: 920px;
     }
 
+    //pomocy
     .message-box__content {
         padding-left: 95px;
         padding-right: 95px;
+        // padding-right: 145px;
     }
     
 }
