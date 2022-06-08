@@ -4,11 +4,19 @@ template.innerHTML = `
     <div class="user-data-table__container">
     <table>
         <thead>
-            <th>First & Last Name</th>
-            <th>Email</th>
-            <th colspan="4">Address</th>
-            <th>Mobile Phone</th>
-            <th>Company Name</th>
+            <tr>
+                <th rowspan="2">First & Last Name</th>
+                <th rowspan="2">Email</th>
+                <th colspan="4">Address</th>
+                <th rowspan="2">Mobile Phone</th>
+                <th rowspan="2">Company Name</th>
+            </tr>
+            <tr>
+                <th>Street</th>
+                <th>Suite</th>
+                <th>City</th>
+                <th>Zip Code</th>
+            </tr>
         </thead>
         <tbody></tbody>
     </table>
