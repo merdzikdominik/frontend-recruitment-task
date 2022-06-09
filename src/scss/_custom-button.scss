@@ -1,8 +1,4 @@
-// @use 'utils';
-
 .text-box {
-    // margin: 0 auto;
-    // width: 128px;
     width: 148px;
     height: 70px;
     position: relative;
@@ -67,7 +63,7 @@
     opacity: 0;
 }
 
-// button comes slowly from the bottom after page refresh/ popup appear
+// button comes slowly from the bottom after page refresh/popup appear
 // .btn-animate {
 //     animation: moveInBottom 5s ease-out;
 //     animation-fill-mode: backwards;
