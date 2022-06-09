@@ -168,7 +168,7 @@
 .close-burger:before, .close-burger:after {
   position: absolute;
   left: 5px;
-  content: '';
+  content: "";
   height: 12px;
   width: 2px;
   background-color: #000;
