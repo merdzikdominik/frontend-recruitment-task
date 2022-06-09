@@ -45,11 +45,9 @@
 }
 
 .message-box__text {
-    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    height: inherit;
 
     & h1 {
         width: 100%;

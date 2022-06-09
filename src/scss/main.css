@@ -204,7 +204,6 @@
 }
 
 .message-box__text {
-  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,7 +212,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
-  height: inherit;
 }
 
 .message-box__text h1 {
