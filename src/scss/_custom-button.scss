@@ -1,11 +1,12 @@
-// @use 'utils';
-
 .text-box {
-    width: 128px;
+    width: 148px;
+    height: 70px;
+    position: relative;
 }
 
 .btn:link,
 .btn:visited {
+    word-break: normal;
     text-decoration: none;
     padding: 16px 40px;
     display: inline-block;
@@ -62,7 +63,7 @@
     opacity: 0;
 }
 
-// button comes slowly from the bottom after page refresh/ popup appear
+// button comes slowly from the bottom after page refresh/popup appear
 // .btn-animate {
 //     animation: moveInBottom 5s ease-out;
 //     animation-fill-mode: backwards;

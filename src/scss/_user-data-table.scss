@@ -3,7 +3,12 @@
     height: 140px;
     overflow-y: scroll;
 
-    & table {
+    //transforming the table to not being a table anymore
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    table {
         border-collapse: collapse;
         width: 100%;
 
@@ -18,9 +23,88 @@
             text-align: center;
         }
 
+        // forcing td to behave like a row
+        td {
+            position: relative;
+            padding-left: 50%;
+          }
+
         tr:nth-child(even) {
             background-color: $light-grey;
-          }
-        
+        }
+
+        // hiding table headers, not switching to display: none (for accessibility)
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 0;
+			left: 6px;
+			width: 45%;
+            padding: 8px;
+			padding-right: 10px;
+			white-space: nowrap;
+            font-weight: 700;
+		}
+
+        // TODO zamienic pozycjonowanie popupa w main branchu, ma byc takie jak na tym
+
+        td:nth-of-type(1):before { content: "First & Last Name"; }
+		td:nth-of-type(2):before { content: "Email"; }
+		td:nth-of-type(3):before { content: "City"; } // street
+		td:nth-of-type(4):before { content: "Street"; } // suite
+		td:nth-of-type(5):before { content: "Suite"; } // city
+		td:nth-of-type(6):before { content: "Mobile Phone"; } // mobile
+		td:nth-of-type(7):before { content: "Company Name"; } // company name
+    }
+}
+
+@media (min-width: $desktop) {
+    .user-data-table__container {
+        table {
+            display: table;
+
+            thead {
+                display: table-header-group;
+            }
+    
+            thead tr {
+                position: relative;
+                left: initial;
+                top: initial;
+            }
+
+            tbody {
+                display: table-row-group;
+            }
+    
+            tr {
+                display: table-row;
+            }
+    
+            th, td {
+                display: table-cell;
+            }
+    
+            td {
+                border: initial;
+                border-bottom: 1px solid $light-grey;
+                padding: 8px!important;
+            }
+
+            td:nth-of-type(1):before { content: none; }
+            td:nth-of-type(2):before { content: none; }
+            td:nth-of-type(3):before { content: none; }
+            td:nth-of-type(4):before { content: none; }
+            td:nth-of-type(5):before { content: none; }
+            td:nth-of-type(6):before { content: none; }
+            td:nth-of-type(7):before { content: none; }
+        }
     }
 }

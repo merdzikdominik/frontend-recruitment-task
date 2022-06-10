@@ -1,15 +1,15 @@
-// @use 'utils';
-
 .message-box__container {
+    // position: relative;
     position: absolute;
-    z-index: 7;
     left: 0;
     right: 0;
-    top: 375px;
-    margin: 0 auto;
-    // height: 210px;
-    width: 100%;
+    top: 0;
+    bottom: 0;
+    max-height: 365px;
+    margin: auto;
+    z-index: 7;
     background-color: $white;
+    width: auto;
     overflow: hidden;
     font-family: sans-serif, 'Roboto';
 }
@@ -20,14 +20,13 @@
     top: 46px;
     width: 12px;
     height: 12px;
-    opacity: 1;
     color: $black;
     cursor: pointer;
 
     &:before, &:after {
         position: absolute;
         left: 5px;
-        content: ' ';
+        content: "";
         height: 12px;
         width: 2px;
         background-color: $black;
@@ -45,11 +44,8 @@
 .message-box__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 57px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 57px;
+    align-items: self-end;
+    padding: 57px 25px;
 }
 
 .resetButtonVisible {
@@ -57,11 +53,9 @@
 }
 
 .message-box__text {
-    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    height: inherit;
 
     & h1 {
         width: 100%;
@@ -82,9 +76,8 @@
 
 @media (min-width: $tablet) {
     .message-box__container {
-        width: 620px;
+        width: 720px;
     }
-
 }
 
 @media (min-width: $desktop) {
@@ -96,5 +89,4 @@
         padding-left: 95px;
         padding-right: 95px;
     }
-    
 }

@@ -7,15 +7,14 @@ template.innerHTML = `
             <tr>
                 <th rowspan="2">First & Last Name</th>
                 <th rowspan="2">Email</th>
-                <th colspan="4">Address</th>
+                <th colspan="3">Address</th>
                 <th rowspan="2">Mobile Phone</th>
                 <th rowspan="2">Company Name</th>
             </tr>
             <tr>
+                <th>City</th>
                 <th>Street</th>
                 <th>Suite</th>
-                <th>City</th>
-                <th>Zip Code</th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -44,10 +43,9 @@ class UserDataTable extends HTMLElement {
                 <tr>
                     <td>${user.name}</td>
                     <td>${user.email}</td>
+                    <td>${user.address.city}</td>
                     <td>${user.address.street}</td>
                     <td>${user.address.suite}</td>
-                    <td>${user.address.city}</td>
-                    <td>${user.address.zipcode}</td>
                     <td>${user.phone}</td>
                     <td>${user.company.name}</td>
                 </tr>
