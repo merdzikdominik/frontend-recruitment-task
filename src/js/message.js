@@ -18,6 +18,7 @@ template.innerHTML = `
             <custom-button class="btn-not-visible" content="Reset Counter"></custom-button>
         </div>
         <div class="close-burger"></div>
+        <loading-screen></loading-screen>
         <user-table></user-table>
     </div>
 `;

@@ -54,6 +54,15 @@ class UserDataTable extends HTMLElement {
 
             tableBody.appendChild(rowNode);
         }
+
+        // grabbing the loading screen overlay
+        const loadingScreenOverlay = document.querySelector('overlay-window')
+                                        .shadowRoot.querySelector('message-box')
+                                        .shadowRoot.querySelector('loading-screen')
+                                        .shadowRoot.querySelector('.loading-screen-overlay');
+
+        //making the loader invisible after fetching user data from endpoint
+        loadingScreenOverlay.classList.add('loader-not-visible');
     }
 
     connectedCallback() {

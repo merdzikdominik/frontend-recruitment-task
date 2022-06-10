@@ -3,7 +3,7 @@
     height: 140px;
     overflow-y: scroll;
 
-    //transforming the table to not being a table anymore
+    // transforming the table to not being a table anymore
     table, thead, tbody, th, td, tr {
         display: block;
     }
@@ -13,11 +13,11 @@
         width: 100%;
 
         th {
-            background-color: $light-grey;
+            background-color: $grey-white;
         }
 
         th, td {
-            border: 1px solid $grey;
+            border: 1px solid $light-grey;
             text-align: left;
             padding: 8px;
             text-align: center;
@@ -30,7 +30,7 @@
           }
 
         tr:nth-child(even) {
-            background-color: $light-grey;
+            background-color: $grey-white;
         }
 
         // hiding table headers, not switching to display: none (for accessibility)
@@ -41,9 +41,9 @@
         }
 
         td:before {
-			/* Now like a table header */
+			// behave like a table header
 			position: absolute;
-			/* Top/left values mimic padding */
+			// top/left values mimic padding
 			top: 0;
 			left: 6px;
 			width: 45%;
@@ -53,15 +53,13 @@
             font-weight: 700;
 		}
 
-        // TODO zamienic pozycjonowanie popupa w main branchu, ma byc takie jak na tym
-
         td:nth-of-type(1):before { content: "First & Last Name"; }
 		td:nth-of-type(2):before { content: "Email"; }
-		td:nth-of-type(3):before { content: "City"; } // street
-		td:nth-of-type(4):before { content: "Street"; } // suite
-		td:nth-of-type(5):before { content: "Suite"; } // city
-		td:nth-of-type(6):before { content: "Mobile Phone"; } // mobile
-		td:nth-of-type(7):before { content: "Company Name"; } // company name
+		td:nth-of-type(3):before { content: "City"; }
+		td:nth-of-type(4):before { content: "Street"; }
+		td:nth-of-type(5):before { content: "Suite"; }
+		td:nth-of-type(6):before { content: "Mobile Phone"; }
+		td:nth-of-type(7):before { content: "Company Name"; }
     }
 }
 
@@ -94,7 +92,7 @@
     
             td {
                 border: initial;
-                border-bottom: 1px solid $light-grey;
+                border-bottom: 1px solid $grey-white;
                 padding: 8px!important;
             }
 

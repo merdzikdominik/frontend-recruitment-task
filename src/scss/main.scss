@@ -2,8 +2,9 @@
 
 // colors
 $white: #FFFFFF;
-$light-grey: #EEEEEE;
-$grey: #DDDDDD;
+$grey-white: #EEEEEE;
+$light-grey: #DDDDDD;
+$grey: #69717D;
 $light-brown: #E4C1AE;
 $grey-brown: #A0887C;
 $black: #000000;
@@ -19,6 +20,7 @@ $desktop: 1140px;
 @import 'message';
 @import 'custom-button';
 @import 'user-data-table';
+@import 'loading-screen';
 
 
 * {
