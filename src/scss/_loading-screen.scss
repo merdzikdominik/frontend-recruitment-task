@@ -1,6 +1,3 @@
-$spinner-size: 75px !default;
-// $spinner-color: #69717d !default;
-
 @mixin absolute-center {
   position: absolute;
   left: 0;
@@ -21,7 +18,7 @@ $spinner-size: 75px !default;
 }
     
 .spinner {
-  font-size: $spinner-size;
+  font-size: 75px;
   position: relative;
   display: inline-block;
   width: 1em;
