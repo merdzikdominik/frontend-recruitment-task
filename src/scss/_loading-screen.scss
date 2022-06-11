@@ -1,65 +1,64 @@
 @mixin absolute-center {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 8;
-}
-
-.loader-not-visible {
-    display: none;
-}
-
-.loading-screen-overlay {
-  background: rgba($black,.9);
-  @include absolute-center;
-}
-    
-.spinner {
-  font-size: 75px;
-  position: relative;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 8;
+  }
   
-  &.center {
+  .loader-not-visible {
+      display: none;
+  }
+  
+  .loading-screen-overlay {
+    background: rgba($black,.9);
     @include absolute-center;
   }
-}
-
-.spinner-blade {
-  position: absolute;
-  left: .4629em;
-  bottom: 0;
-  width: .074em;
-  height: .2777em;
-  border-radius: .5em;
-  background-color: transparent;
-  transform-origin: center -.2222em;
-  animation: spinner-fade 1s infinite linear;
-
-  $animation-delay: 0s;
-  $blade-rotation: 0deg;
-
-  @for $i from 1 through 12 {
-    &:nth-child(#{$i}) {
-      animation-delay: $animation-delay;
-      transform: rotate($blade-rotation);
-      $blade-rotation: $blade-rotation + 30;
-      $animation-delay: $animation-delay + .083;
+      
+  .spinner {
+    font-size: 75px;
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    
+    &.center {
+      @include absolute-center;
     }
   }
-}
-
-@keyframes spinner-fade {
-  0% {
-    background-color: $grey;
+  
+  .spinner-blade {
+    position: absolute;
+    left: .4629em;
+    bottom: 0;
+    width: .074em;
+    height: .2777em;
+    border-radius: .5em;
+    background-color: transparent;
+    transform-origin: center -.2222em;
+    animation: spinner-fade 1s infinite linear;
+  
+    $animation-delay: 0s;
+    $blade-rotation: 0deg;
+  
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: $animation-delay;
+        transform: rotate($blade-rotation);
+        $blade-rotation: $blade-rotation + 30;
+        $animation-delay: $animation-delay + .083;
+      }
+    }
   }
   
-  100% {
-    background-color: transparent;
+  @keyframes spinner-fade {
+    0% {
+      background-color: $grey;
+    }
+    
+    100% {
+      background-color: transparent;
+    }
   }
-}
-

@@ -2,7 +2,7 @@ import { overlayCloseHandler } from './helpers/overlay-helper.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
-    <link rel="stylesheet" href="src/scss/main.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <section class="overlay-container">
         <message-box></message-box>
         <div class="overlay-container__backdrop"></div>
