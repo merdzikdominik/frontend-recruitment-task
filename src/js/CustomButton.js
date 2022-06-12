@@ -23,4 +23,4 @@ class CustomButton extends HTMLElement {
 
 }
 
-window.customElements.define('custom-button', CustomButton);
+export default CustomButton;

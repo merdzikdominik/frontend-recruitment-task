@@ -68,4 +68,4 @@ class Message extends HTMLElement {
 
 }
 
-window.customElements.define('message-box', Message);
+export default Message;

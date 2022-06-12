@@ -28,4 +28,4 @@ class Overlay extends HTMLElement {
     };
 }
 
-window.customElements.define('overlay-window', Overlay);
+export default Overlay;

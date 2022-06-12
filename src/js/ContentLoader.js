@@ -44,4 +44,4 @@ class ContentLoader extends HTMLElement {
     };
 }
 
-window.customElements.define('content-loader', ContentLoader);
+export default ContentLoader;

@@ -72,4 +72,4 @@ class UserDataTable extends HTMLElement {
     }
 }
 
-window.customElements.define('user-table', UserDataTable);
+export default UserDataTable;

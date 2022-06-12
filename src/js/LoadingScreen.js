@@ -29,4 +29,4 @@ class LoadingScreen extends HTMLElement {
     }
 }
 
-window.customElements.define('loading-screen', LoadingScreen);
+export default LoadingScreen;
