@@ -1,0 +1,86 @@
+.message-box__container {
+    position: relative;
+    max-height: 365px;
+    z-index: 7;
+    background-color: $white;
+    width: auto;
+    overflow: hidden;
+    font-family: sans-serif, 'Roboto';
+}
+
+.close-burger {
+    position: absolute;
+    right: 46px;
+    top: 46px;
+    width: 12px;
+    height: 12px;
+    color: $black;
+    cursor: pointer;
+
+    &:before, &:after {
+        position: absolute;
+        left: 5px;
+        content: "";
+        height: 12px;
+        width: 2px;
+        background-color: $black;
+      }
+      &:before {
+        transform: rotate(45deg);
+        height: 17px;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        height: 17px;
+      }
+  }
+
+.message-box__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-end;
+    padding: 57px 25px;
+}
+
+.resetButtonVisible {
+    display: block!important;
+}
+
+.message-box__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    & h1 {
+        width: 100%;
+        max-width: 380px;
+        color: $dark;
+        font-size: 42px;
+    }
+
+    & p {
+        color: #121212;
+        line-height: 24px;
+    }
+
+    & span {
+        font-weight: 600;
+    }
+}
+
+@media (min-width: $tablet) {
+    .message-box__container {
+        width: 720px;
+    }
+}
+
+@media (min-width: $desktop) {
+    .message-box__container {
+        width: 920px;
+    }
+
+    .message-box__content {
+        padding-left: 95px;
+        padding-right: 95px;
+    }
+}

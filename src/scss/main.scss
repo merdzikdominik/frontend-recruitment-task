@@ -1,0 +1,35 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+// colors
+$white: #FFFFFF;
+$grey-white: #EEEEEE;
+$light-grey: #DDDDDD;
+$grey: #69717D;
+$light-brown: #E4C1AE;
+$grey-brown: #A0887C;
+$black: #000000;
+$dark: #121212;
+
+// screen sizes
+$tablet: 768px;
+$desktop: 1140px;
+
+// general styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+// files
+@import 'content-loader';
+@import 'overlay';
+@import 'message';
+@import 'custom-button';
+@import 'user-data-table';
+@import 'loading-screen';
