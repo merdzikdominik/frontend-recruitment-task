@@ -1,10 +1,12 @@
 const template = document.createElement('template');
 template.innerHTML = `
     <link rel="stylesheet" href="src/css/main.css">
-    <div class="text-box">
-        <a href="javascript:;" class="btn btn-colors btn-animate"></a>
-    </div>
+    <button class="btn btn-colors btn-animate"></button>
 `;
+
+{/* <div class="text-box">
+<a href="javascript:;" class="btn btn-colors btn-animate"></a>
+</div> */}
 
 class CustomButton extends HTMLElement {
     constructor() {
@@ -18,7 +20,7 @@ class CustomButton extends HTMLElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        this.shadowRoot.querySelector('a').textContent = this.getAttribute('content');
+        this.shadowRoot.querySelector('button').textContent = this.getAttribute('content');
     }
 
 }
