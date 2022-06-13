@@ -4,10 +4,6 @@ template.innerHTML = `
     <button class="btn btn-colors btn-animate"></button>
 `;
 
-{/* <div class="text-box">
-<a href="javascript:;" class="btn btn-colors btn-animate"></a>
-</div> */}
-
 class CustomButton extends HTMLElement {
     constructor() {
         super();
