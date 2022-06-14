@@ -1,25 +1,15 @@
-.text-box {
-    width: 148px;
-    height: 70px;
-    position: relative;
-}
-
-.btn:link,
-.btn:visited {
+.btn {
     word-break: normal;
     text-decoration: none;
     padding: 16px 40px;
     display: inline-block;
     border-radius: 48px;
+    border: none;
     text-align: center;
     transition: all .2s;
-    position: absolute;
+    position: relative;
     font-weight: 700;
-}
-
-.btn:active, .btn:hover, .btn:focus {
-    text-decoration: none;
-    color: $white;
+    cursor: pointer;
 }
 
 .btn-not-visible {
@@ -29,11 +19,6 @@
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-colors {
