@@ -227,7 +227,7 @@ html, body {
   gap: 24px;
 }
 
-.message-box__text h1 {
+.message-box__text h2 {
   width: 100%;
   max-width: 380px;
   color: #121212;

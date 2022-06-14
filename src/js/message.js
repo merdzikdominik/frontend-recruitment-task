@@ -7,7 +7,7 @@ template.innerHTML = `
     <div class="message-box__container">
         <div class="message-box__content">
             <div class="message-box__text">
-                <h1>Alert!</h1>
+                <h2>Alert!</h2>
                 <p>You have clicked 
                     <span>
                         <output></output> times
