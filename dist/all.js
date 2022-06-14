@@ -14,10 +14,8 @@ import{overlayInitHandler}from"./helpers/overlay-helper.js";const template=docum
     </section>
 `;class ContentLoader extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(template.content.cloneNode(!0))}static get observedAttributes(){return["picture","content","title"]}loadOverlay(){this.shadowRoot.querySelector("custom-button").addEventListener("click",overlayInitHandler)}attributeChangedCallback(e,t,o){this.shadowRoot.querySelector("h1").textContent=this.getAttribute("title"),this.shadowRoot.querySelector(".displayed-picture").src=this.getAttribute("picture"),this.shadowRoot.querySelector("p").textContent=this.getAttribute("content")}connectedCallback(){this.loadOverlay()}}export default ContentLoader;const template=document.createElement("template");template.innerHTML=`
     <link rel="stylesheet" href="src/css/main.css">
-    <div class="text-box">
-        <a href="javascript:;" class="btn btn-colors btn-animate"></a>
-    </div>
-`;class CustomButton extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(template.content.cloneNode(!0))}static get observedAttributes(){return["content"]}attributeChangedCallback(e,t,o){this.shadowRoot.querySelector("a").textContent=this.getAttribute("content")}}export default CustomButton;const template=document.createElement("template");template.innerHTML=`
+    <button class="btn btn-colors"></button>
+`;class CustomButton extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(template.content.cloneNode(!0))}static get observedAttributes(){return["content"]}attributeChangedCallback(e,t,o){this.shadowRoot.querySelector("button").textContent=this.getAttribute("content")}}export default CustomButton;const template=document.createElement("template");template.innerHTML=`
     <link rel="stylesheet" href="src/css/main.css">
     <div class="loading-screen-overlay">
         <div class="spinner center">

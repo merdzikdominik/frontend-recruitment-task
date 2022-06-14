@@ -259,29 +259,19 @@ html, body {
   }
 }
 
-.text-box {
-  width: 148px;
-  height: 70px;
-  position: relative;
-}
-
-.btn:link,
-.btn:visited {
+.btn {
   word-break: normal;
   text-decoration: none;
   padding: 16px 40px;
   display: inline-block;
   border-radius: 48px;
+  border: none;
   text-align: center;
   -webkit-transition: all .2s;
   transition: all .2s;
-  position: absolute;
+  position: relative;
   font-weight: 700;
-}
-
-.btn:active, .btn:hover, .btn:focus {
-  text-decoration: none;
-  color: #FFFFFF;
+  cursor: pointer;
 }
 
 .btn-not-visible {
@@ -293,13 +283,6 @@ html, body {
           transform: translateY(-3px);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-colors {
