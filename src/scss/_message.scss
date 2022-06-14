@@ -16,9 +16,9 @@
     cursor: pointer;
 
     &:before, &:after {
+        content: "";
         position: absolute;
         left: 5px;
-        content: "";
         height: 12px;
         width: 2px;
         background-color: $black;
@@ -49,7 +49,7 @@
     flex-direction: column;
     gap: 24px;
 
-    & h1 {
+    & h2 {
         width: 100%;
         max-width: 380px;
         color: $dark;

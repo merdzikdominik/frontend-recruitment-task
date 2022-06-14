@@ -1,6 +1,6 @@
 const template = document.createElement('template');
 template.innerHTML = `
-    <link rel="stylesheet" href="src/scss/main.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <div class="text-box">
         <a href="javascript:;" class="btn btn-colors btn-animate"></a>
     </div>
@@ -23,4 +23,4 @@ class CustomButton extends HTMLElement {
 
 }
 
-window.customElements.define('custom-button', CustomButton);
+export default CustomButton;

@@ -2,7 +2,7 @@ import { overlayInitHandler } from './helpers/overlay-helper.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
-    <link rel="stylesheet" href="src/scss/main.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <section class="main-module">
         <div class="main-module-image__container">
             <img class="displayed-picture" alt="picture representing the beach and the sea on the right side"/>
@@ -44,4 +44,4 @@ class ContentLoader extends HTMLElement {
     };
 }
 
-window.customElements.define('content-loader', ContentLoader);
+export default ContentLoader;

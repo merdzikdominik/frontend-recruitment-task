@@ -3,11 +3,11 @@ import { overlayCloseHandler } from './helpers/overlay-helper.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
-    <link rel="stylesheet" href="src/scss/main.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <div class="message-box__container">
         <div class="message-box__content">
             <div class="message-box__text">
-                <h1>Alert!</h1>
+                <h2>Alert!</h2>
                 <p>You have clicked 
                     <span>
                         <output></output> times
@@ -66,4 +66,4 @@ class Message extends HTMLElement {
 
 }
 
-window.customElements.define('message-box', Message);
+export default Message;
