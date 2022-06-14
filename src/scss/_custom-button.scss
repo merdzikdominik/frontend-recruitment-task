@@ -63,12 +63,6 @@
     opacity: 0;
 }
 
-// button comes slowly from the bottom after page refresh/popup appear
-// .btn-animate {
-//     animation: moveInBottom 5s ease-out;
-//     animation-fill-mode: backwards;
-// }
-
 @keyframes moveInBottom {
     0% {
         opacity: 0;
