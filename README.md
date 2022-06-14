@@ -9,7 +9,6 @@ https://merdzikdominik.github.io/frontend-recruitment-task/
 Aby móc edytować oraz obserwować zmiany wyglądu strony, należy:\
 a) sklonować projekt używając w tym celu polecenia: git clone https://github.com/merdzikdominik/frontend-recruitment-task.git \
 b) otworzyć folder z projektem w środowisku\
-<img src="images/tut1.jpg"/> \
 c) uruchomić wtyczkę live server i live sass compiler
 
 # Zadanie dodatkowe
