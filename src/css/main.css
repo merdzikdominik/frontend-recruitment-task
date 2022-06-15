@@ -303,7 +303,7 @@ html, body {
   transition: all .4s;
 }
 
-.btn-colors::after {
+.btn::after {
   background-color: #A0887C;
 }
 
