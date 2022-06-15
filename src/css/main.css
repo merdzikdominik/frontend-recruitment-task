@@ -175,7 +175,7 @@ html, body {
           justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   padding: 57px 25px;
 }
 
