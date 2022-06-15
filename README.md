@@ -15,7 +15,7 @@ c) uruchomić wtyczkę `Live Server` i `Live Sass Compiler`
 
 # Zadanie dodatkowe
 
-Aby móc wyświetlić zadanie dodatkowe, znajdujące się na branchu 'additional-branch', należy:\
+Aby móc wyświetlić zadanie dodatkowe, znajdujące się na branchu 'additional-task', należy:\
 a) sklonować projekt używając w tym celu polecenia: `git clone https://github.com/merdzikdominik/frontend-recruitment-task.git` \
 b) otworzyć folder z projektem w środowisku\
 c) uruchomić wtyczkę `Live Server` i `Live Sass Compiler`\
