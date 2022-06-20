@@ -4,7 +4,7 @@ import { overlayCloseHandler } from './helpers/overlay-helper.js';
 const template = document.createElement('template');
 template.innerHTML = `
     <link rel="stylesheet" href="src/css/main.css">
-    <div class="message-box__container">
+    <div class="message-box">
         <div class="message-box__content">
             <div class="message-box__text">
                 <h2>Alert!</h2>

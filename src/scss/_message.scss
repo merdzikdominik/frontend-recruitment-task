@@ -1,4 +1,4 @@
-.message-box__container {
+.message-box {
     position: relative;
     max-height: 365px;
     z-index: 7;
@@ -6,6 +6,36 @@
     width: auto;
     overflow: hidden;
     font-family: sans-serif, 'Roboto';
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end!important;
+        padding: 57px 25px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    
+        & h2 {
+            width: 100%;
+            max-width: 380px;
+            color: $dark;
+            font-size: 42px;
+        }
+    
+        & p {
+            color: #121212;
+            line-height: 24px;
+        }
+    
+        & span {
+            font-weight: 600;
+        }
+    }
+    
 }
 
 .close-burger {
@@ -35,37 +65,8 @@
       }
   }
 
-.message-box__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: self-end;
-    padding: 57px 25px;
-}
-
 .resetButtonVisible {
     display: block!important;
-}
-
-.message-box__text {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    & h2 {
-        width: 100%;
-        max-width: 380px;
-        color: $dark;
-        font-size: 42px;
-    }
-
-    & p {
-        color: #121212;
-        line-height: 24px;
-    }
-
-    & span {
-        font-weight: 600;
-    }
 }
 
 @media (min-width: $tablet) {
